@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %} Profile {% endblock %}
+
+{% block main %}
+<div class=main>
+    <div id=upperhalf>
+        <img src="{{url_for('static', filename='maryjane.png')}}"></img>
+        <p id=name>{{name}}</p>
+        <p id=info>@{{username}}</p>
+        <p id=info>{{location}}</p>
+        <p id=info>{{joindate}}</p>
+        
+    </div>
+    <div id=profileinfo>
+        <p>{{bio}}</p>
+        <div class ="stats">
+          <div class="row">
+            <div class="column"  >
+              <h2 class="nums">{{posts}}</h2>
+              <p class="labels">Posts</p>
+            </div>
+            <div class="column" >
+              <h2 class="nums">{{following}}</h2>
+              <p class="labels">Following</p>
+            </div>
+            <div class="column">
+              <h2 class="nums">{{followers}}</h2>
+              <p class="labels">Followers</p>
+            </div>
+            <div id="fbutton">
+              <button class="button"type="button">Follow</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
